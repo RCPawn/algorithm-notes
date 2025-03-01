@@ -14,17 +14,12 @@
 """
 
 
-# 0 -> 0
-# 1 -> 0
-# 2 -> 0
-# 3 -> 0
-# 4 -> 1
 def numSquares(n: int) -> int:
     dp = [n + 1] * (n + 1)
     dp[0] = 0
 
     # 生成所有不超过 n 的完全平方数
-    squares = [i * i for i in range(1, int(n**0.5) + 1)]
+    squares = [i * i for i in range(1, int(n ** 0.5) + 1)]
 
     for i in range(1, n + 1):
         for square in squares:
@@ -38,4 +33,3 @@ def numSquares(n: int) -> int:
 # 测试
 print(numSquares(12))  # 输出: 3 (12 = 4 + 4 + 4)
 print(numSquares(13))  # 输出: 2 (13 = 4 + 9)
-
