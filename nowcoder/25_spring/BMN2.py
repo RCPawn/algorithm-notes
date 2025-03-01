@@ -23,12 +23,18 @@
             ba
 """
 
-s = input().strip()
-substrings = []
 
-for i in range(len(s) - 1):
-    substrings.append(s[i:i + 2])
+def main():
+    s = input().strip()
+    substrings = []
 
-substrings.sort()
-for sub in substrings:
-    print(sub)
+    for i in range(len(s) - 1):
+        substrings.append(s[i:i + 2])
+
+    substrings.sort()
+    for sub in substrings:
+        print(sub)
+
+
+if __name__ == '__main__':
+    main()
